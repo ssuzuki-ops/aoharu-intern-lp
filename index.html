@@ -73,7 +73,7 @@ header{
 .hero-body{
   position:relative;z-index:2;
   display:grid;
-  grid-template-columns:480px 1fr;
+  grid-template-columns:1fr 400px;
   gap:0;
   align-items:center;
   max-width:1040px;width:100%;
@@ -101,6 +101,18 @@ header{
   font-style:normal;
   color:var(--orange);
 }
+.hero-stats-row{
+  display:flex;align-items:center;gap:0;
+  border:1px solid var(--line);border-radius:10px;
+  background:var(--bg);
+  padding:14px 20px;margin-bottom:0;
+  width:fit-content;
+}
+.hstat{text-align:center;padding:0 18px}
+.hstat-n{display:block;font-size:1.6rem;font-weight:900;color:var(--navy);letter-spacing:-0.04em;line-height:1}
+.hstat-n small{font-size:.5em;font-weight:700}
+.hstat-l{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.hstat-div{width:1px;height:32px;background:var(--line)}
 .hero-quote{
   border-left:3px solid var(--orange);
   padding:2px 0 2px 20px;
@@ -119,16 +131,46 @@ header{
 .hero-cta-row{display:flex;align-items:center;gap:16px}
 .hero-cta-note{font-size:12px;color:var(--muted)}
 
-/* 右: キャラクター + フローティングチップ */
-.hero-char-area{
-  position:relative;
-  display:flex;align-items:flex-end;justify-content:center;
-  height:100%;min-height:480px;
+/* 右: フォームカード */
+.hero-form-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:0 8px 48px rgba(26,48,80,.1);
+  overflow:hidden;
+  align-self:center;
 }
-.hero-char{
-  position:relative;z-index:2;
-  margin-bottom:-8px;
+.hfc-head{
+  background:var(--navy);
+  padding:20px 24px;
+  display:flex;align-items:center;gap:14px;
 }
+.hfc-icon{
+  width:36px;height:36px;background:rgba(255,255,255,.12);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-size:16px;
+}
+.hfc-ttl{font-size:15px;font-weight:700;color:#fff;line-height:1.3}
+.hfc-sub{font-size:11.5px;color:rgba(255,255,255,.55);margin-top:2px}
+.hfc-body{padding:22px 24px}
+.hfc-row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hfc-fl{margin-bottom:12px}
+.hfc-fl label{display:block;font-size:11.5px;color:var(--muted);margin-bottom:4px;font-weight:500}
+.hfc-fi{
+  width:100%;padding:10px 12px;
+  background:var(--bg);border:1.5px solid var(--line);
+  border-radius:6px;font-family:inherit;font-size:14px;color:var(--ink);
+  outline:none;transition:border .18s;
+}
+.hfc-fi:focus{border-color:var(--orange);background:#fff}
+.hfc-submit{
+  width:100%;padding:13px;background:var(--orange);
+  border:none;border-radius:6px;color:#fff;
+  font-family:inherit;font-size:15px;font-weight:700;
+  cursor:pointer;transition:all .18s;margin-top:4px;letter-spacing:.02em;
+}
+.hfc-submit:hover{background:#e07c0e;box-shadow:0 4px 16px rgba(247,148,29,.3)}
+.hfc-note{font-size:11px;color:var(--muted);text-align:center;margin-top:9px}
 
 
 
@@ -368,6 +410,9 @@ footer p{font-size:13px;color:var(--muted)}
   .hero-glow{width:300px;height:300px;left:50%;transform:translate(-50%,-50%)}
   .hero-char-area{min-height:320px;margin-top:20px}
   .fc1,.fc2,.fc3,.fc4,.fc5{display:none}
+  .hero-body{grid-template-columns:1fr}
+  .hero-form-card{margin-top:24px}
+  .hfc-row2{grid-template-columns:1fr}
   .concept-grid,.svc-wrap,.results-wrap,.profile-wrap{grid-template-columns:1fr}
   .svc-char,.profile-char{display:none}
   .prob-grid,.why-grid{grid-template-columns:1fr}
@@ -406,42 +451,34 @@ footer p{font-size:13px;color:var(--muted)}
         <span class="hero-quote-main">いい採用は、いい出会いから。</span>
         <span class="hero-quote-sub">まだ何者でもない2年生に、いちばん早く会う。</span>
       </div>
-      <div class="hero-cta-row">
-        <a href="#cta" class="btn btn-main" style="font-size:15px;padding:14px 32px">資料請求・お問い合わせ</a>
-        <span class="hero-cta-note">無料 / 3分で完了</span>
+      <div class="hero-stats-row">
+        <div class="hstat"><span class="hstat-n">2,000<small>人</small></span><span class="hstat-l">LINE登録数</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">68<small>%</small></span><span class="hstat-l">書類通過率</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">10<small>ヶ月</small></span><span class="hstat-l">伴走期間</span></div>
       </div>
     </div>
 
-    <!-- 右: キャラクター + フローティングチップ -->
-    <div class="hero-char-area">
-
-      <!-- キャラクター -->
-      <div class="hero-char">
-        <svg viewBox="0 0 220 244" xmlns="http://www.w3.org/2000/svg" style="width:340px;height:auto;">
-  <ellipse cx="110" cy="237" rx="62" ry="8" fill="#1A3050" opacity="0.06"/>
-  <path d="M96,188 L92,214" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
-  <path d="M96,188 L92,214" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <path d="M126,188 L130,214" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
-  <path d="M126,188 L130,214" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <ellipse cx="88" cy="220" rx="15" ry="8.5" fill="#4C6699" stroke="#233A63" stroke-width="3.5"/>
-  <ellipse cx="134" cy="220" rx="15" ry="8.5" fill="#4C6699" stroke="#233A63" stroke-width="3.5"/>
-  <path d="M164,148 Q194,112 188,82" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
-  <path d="M164,148 Q194,112 188,82" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <path d="M58,150 Q36,162 40,185" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
-  <path d="M58,150 Q36,162 40,185" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <path d="M53,88 H167 L159,168 Q159,207 110,207 Q61,207 61,168 Z" fill="#6E90C9" stroke="#233A63" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M66,98 V163 Q66,196 110,196 Q154,196 154,163 V98" fill="none" stroke="#CFE0F5" stroke-width="2.2" stroke-dasharray="5 6" stroke-linecap="round"/>
-  <path d="M50,62 H170 Q175,62 175,67 V92 Q175,97 170,97 H50 Q45,97 45,92 V67 Q45,62 50,62 Z" fill="#7C9BD0" stroke="#233A63" stroke-width="4"/>
-  <path d="M54,69 H166" stroke="#CFE0F5" stroke-width="2.2" stroke-dasharray="5 6" stroke-linecap="round"/>
-  <circle cx="110" cy="79" r="9" fill="#F4C430" stroke="#C9971F" stroke-width="2.5"/>
-  <ellipse cx="96" cy="143" rx="9.5" ry="12" fill="#fff" stroke="#233A63" stroke-width="3"/>
-  <ellipse cx="128" cy="143" rx="9.5" ry="12" fill="#fff" stroke="#233A63" stroke-width="3"/>
-  <circle cx="98" cy="145" r="5" fill="#1B2B4A"/>
-  <circle cx="130" cy="145" r="5" fill="#1B2B4A"/>
-  <circle cx="96" cy="142" r="1.6" fill="#fff"/>
-  <circle cx="128" cy="142" r="1.6" fill="#fff"/>
-  <path d="M104,161 Q112,168 120,161" fill="none" stroke="#233A63" stroke-width="3" stroke-linecap="round"/>
-</svg>
+    <!-- 右: フォームカード -->
+    <div class="hero-form-card">
+      <div class="hfc-head">
+        <div class="hfc-icon">✉</div>
+        <div>
+          <div class="hfc-ttl">まずはお気軽にご相談を</div>
+          <div class="hfc-sub">資料請求・個別相談 / 1営業日以内に返信</div>
+        </div>
+      </div>
+      <div class="hfc-body">
+        <div class="hfc-row2">
+          <div class="hfc-fl"><label>会社名</label><input class="hfc-fi" type="text" placeholder="株式会社○○"></div>
+          <div class="hfc-fl"><label>お名前</label><input class="hfc-fi" type="text" placeholder="山田 太郎"></div>
+        </div>
+        <div class="hfc-fl"><label>メールアドレス</label><input class="hfc-fi" type="email" placeholder="taro@company.co.jp"></div>
+        <div class="hfc-fl"><label>電話番号</label><input class="hfc-fi" type="tel" placeholder="03-0000-0000"></div>
+        <div class="hfc-fl"><label>ご要望（任意）</label><textarea class="hfc-fi" rows="2" placeholder="資料請求・個別相談など"></textarea></div>
+        <button class="hfc-submit" type="button">送信する →</button>
+        <div class="hfc-note">無料 · 3分で完了 · 翌営業日以内に返信</div>
       </div>
     </div>
 
