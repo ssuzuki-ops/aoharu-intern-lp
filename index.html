@@ -542,58 +542,68 @@ footer p{font-size:13px;color:var(--muted)}
 
 <!-- POKE BRIDGE -->
 <div class="poke-bridge">
-  <svg viewBox="0 0 240 278" xmlns="http://www.w3.org/2000/svg" style="width:150px;height:auto;">
-    <!-- ground shadow -->
-    <ellipse cx="120" cy="270" rx="54" ry="7" fill="#1C2E4A" opacity="0.08"/>
+  <svg viewBox="0 0 260 290" xmlns="http://www.w3.org/2000/svg" style="width:160px;height:auto;">
+    <!--
+      ポケくん カラー仕様
+      フラップ : #4F7FA4  （濃いデニム）
+      ボディ   : #8CBCD8  （明るいデニム）
+      アウトライン: #162840
+      縫い目   : #FFFFFF  （白）
+      ボタン   : #F6C21C / #B8820A
+      アーム   : #FFFFFF
+      レッグ   : #6494B4
+      フット   : #3A6080
+    -->
 
-    <!-- LEFT ARM (raised – viewer's left) -->
-    <path d="M74,112 Q54,82 46,54" stroke="#1C2E4A" stroke-width="16" fill="none" stroke-linecap="round"/>
-    <path d="M74,112 Q54,82 46,54" stroke="#fff"    stroke-width="9"  fill="none" stroke-linecap="round"/>
-    <!-- left hand -->
-    <circle cx="44" cy="49" r="12" fill="#fff" stroke="#1C2E4A" stroke-width="4"/>
+    <!-- 地面の影 -->
+    <ellipse cx="130" cy="282" rx="58" ry="7" fill="#162840" opacity="0.08"/>
 
-    <!-- RIGHT ARM (relaxed / down) -->
-    <path d="M166,112 Q188,132 192,162" stroke="#1C2E4A" stroke-width="16" fill="none" stroke-linecap="round"/>
-    <path d="M166,112 Q188,132 192,162" stroke="#fff"    stroke-width="9"  fill="none" stroke-linecap="round"/>
-    <!-- right hand -->
-    <circle cx="193" cy="167" r="12" fill="#fff" stroke="#1C2E4A" stroke-width="4"/>
+    <!-- ====== 左腕（上げた方） ====== -->
+    <path d="M76,118 Q56,88 48,58"  stroke="#162840" stroke-width="17" fill="none" stroke-linecap="round"/>
+    <path d="M76,118 Q56,88 48,58"  stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <circle cx="46" cy="53" r="13" fill="#ffffff" stroke="#162840" stroke-width="4.5"/>
 
-    <!-- LEGS -->
-    <path d="M98,202 L95,234"  stroke="#1C2E4A" stroke-width="15" fill="none" stroke-linecap="round"/>
-    <path d="M98,202 L95,234"  stroke="#7BACC8" stroke-width="8"  fill="none" stroke-linecap="round"/>
-    <path d="M142,202 L145,234" stroke="#1C2E4A" stroke-width="15" fill="none" stroke-linecap="round"/>
-    <path d="M142,202 L145,234" stroke="#7BACC8" stroke-width="8"  fill="none" stroke-linecap="round"/>
+    <!-- ====== 右腕（下げた方） ====== -->
+    <path d="M184,118 Q206,140 210,170" stroke="#162840" stroke-width="17" fill="none" stroke-linecap="round"/>
+    <path d="M184,118 Q206,140 210,170" stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <circle cx="211" cy="175" r="13" fill="#ffffff" stroke="#162840" stroke-width="4.5"/>
 
-    <!-- FEET -->
-    <ellipse cx="92"  cy="239" rx="18" ry="9.5" fill="#4A7AAD" stroke="#1C2E4A" stroke-width="3.5"/>
-    <ellipse cx="148" cy="239" rx="18" ry="9.5" fill="#4A7AAD" stroke="#1C2E4A" stroke-width="3.5"/>
+    <!-- ====== 脚 ====== -->
+    <path d="M105,214 L102,248" stroke="#162840" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M105,214 L102,248" stroke="#6494B4" stroke-width="9"  fill="none" stroke-linecap="round"/>
+    <path d="M155,214 L158,248" stroke="#162840" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M155,214 L158,248" stroke="#6494B4" stroke-width="9"  fill="none" stroke-linecap="round"/>
 
-    <!-- POCKET BODY -->
-    <rect x="48" y="94" width="144" height="110" rx="16" fill="#8DBAD8" stroke="#1C2E4A" stroke-width="5"/>
-    <!-- body inner stitch -->
-    <rect x="60" y="105" width="120" height="89" rx="10" fill="none" stroke="#B8D8EC" stroke-width="2.5" stroke-dasharray="8,5.5"/>
+    <!-- ====== 足（楕円） ====== -->
+    <ellipse cx="99"  cy="253" rx="19" ry="10" fill="#3A6080" stroke="#162840" stroke-width="4"/>
+    <ellipse cx="161" cy="253" rx="19" ry="10" fill="#3A6080" stroke="#162840" stroke-width="4"/>
 
-    <!-- POCKET FLAP -->
-    <rect x="48" y="52" width="144" height="50" rx="12" fill="#6A9DC5" stroke="#1C2E4A" stroke-width="5"/>
-    <!-- flap inner stitch -->
-    <rect x="60" y="62" width="120" height="28" rx="6" fill="none" stroke="#B8D8EC" stroke-width="2.5" stroke-dasharray="7,5"/>
+    <!-- ====== ポケット本体 ====== -->
+    <rect x="50" y="100" width="160" height="116" rx="18" fill="#8CBCD8" stroke="#162840" stroke-width="5.5"/>
+    <!-- 本体・白い縫い目 -->
+    <rect x="63"  y="112" width="134" height="92"  rx="11" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-dasharray="9,6"/>
 
-    <!-- YELLOW BUTTON -->
-    <circle cx="120" cy="77" r="10" fill="#F5C030" stroke="#1C2E4A" stroke-width="3"/>
-    <circle cx="120" cy="77" r="5"  fill="#C98B10"/>
+    <!-- ====== フラップ（上部帯） ====== -->
+    <rect x="50" y="55"  width="160" height="54"  rx="14" fill="#4F7FA4" stroke="#162840" stroke-width="5.5"/>
+    <!-- フラップ・白い縫い目 -->
+    <rect x="63"  y="67"  width="134" height="30"  rx="7"  fill="none" stroke="#ffffff" stroke-width="2.8" stroke-dasharray="8,5.5"/>
 
-    <!-- EYES -->
-    <circle cx="95"  cy="135" r="15" fill="#fff" stroke="#1C2E4A" stroke-width="3.5"/>
-    <circle cx="145" cy="135" r="15" fill="#fff" stroke="#1C2E4A" stroke-width="3.5"/>
-    <!-- pupils -->
-    <circle cx="96"  cy="137" r="8"  fill="#1C2E4A"/>
-    <circle cx="146" cy="137" r="8"  fill="#1C2E4A"/>
-    <!-- eye shine -->
-    <circle cx="92"  cy="131" r="3.5" fill="#fff"/>
-    <circle cx="142" cy="131" r="3.5" fill="#fff"/>
+    <!-- ====== ボタン ====== -->
+    <circle cx="130" cy="82" r="11" fill="#F6C21C" stroke="#162840" stroke-width="3.5"/>
+    <circle cx="130" cy="82" r="5.5" fill="#B8820A"/>
 
-    <!-- SMILE -->
-    <path d="M103,162 Q120,177 137,162" stroke="#1C2E4A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- ====== 目 ====== -->
+    <circle cx="103" cy="146" r="16" fill="#ffffff" stroke="#162840" stroke-width="4"/>
+    <circle cx="157" cy="146" r="16" fill="#ffffff" stroke="#162840" stroke-width="4"/>
+    <!-- 瞳 -->
+    <circle cx="105" cy="148" r="8.5" fill="#162840"/>
+    <circle cx="159" cy="148" r="8.5" fill="#162840"/>
+    <!-- ハイライト -->
+    <circle cx="101" cy="143" r="3.8" fill="#ffffff"/>
+    <circle cx="155" cy="143" r="3.8" fill="#ffffff"/>
+
+    <!-- ====== 口（笑顔） ====== -->
+    <path d="M112,172 Q130,188 148,172" stroke="#162840" stroke-width="4" fill="none" stroke-linecap="round"/>
   </svg>
 </div>
 
