@@ -152,7 +152,7 @@ header{
   align-self:center;
 }
 .hfc-head{
-  background:var(--blue);
+  background:#6B7280;
   padding:20px 24px;
   display:flex;align-items:center;gap:14px;
 }
@@ -335,13 +335,49 @@ header{
 .why-card h3{font-size:17px;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:9px}
 .why-card p{font-size:14px;color:var(--muted);line-height:1.75}
 
-/* ====== PHOTOS ====== */
-.photo-sec{background:var(--bg2);padding:64px 0}
-.photo-lbl{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:20px}
-.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.ph{border-radius:10px;overflow:hidden;aspect-ratio:4/3}
-.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-.ph:hover img{transform:scale(1.05)}
+/* ====== POKE BRIDGE ====== */
+.poke-bridge{
+  background:var(--white);
+  display:flex;justify-content:center;align-items:flex-end;
+  padding:0 0 0;
+  overflow:hidden;
+}
+.poke-bridge svg{
+  animation:poke-float 3s ease-in-out infinite;
+  filter:drop-shadow(0 6px 16px rgba(26,48,80,.12));
+}
+@keyframes poke-float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+/* ====== PHOTOS CAROUSEL ====== */
+.carousel-sec{background:var(--bg2);padding:52px 0;overflow:hidden}
+.carousel-lbl{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:28px}
+.carousel-track-outer{width:100%;overflow:hidden;mask-image:linear-gradient(to right,transparent 0,black 6%,black 94%,transparent 100%)}
+.carousel-track{
+  display:flex;gap:16px;
+  width:max-content;
+  animation:scroll-left 30s linear infinite;
+}
+.carousel-track:hover{animation-play-state:paused}
+.c-item{
+  flex:none;width:300px;height:200px;
+  border-radius:12px;overflow:hidden;
+  box-shadow:0 4px 16px rgba(26,48,80,.08);
+}
+.c-item img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center 20%;
+  display:block;
+  transition:transform .4s;
+}
+.c-item:hover img{transform:scale(1.04)}
+@keyframes scroll-left{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
 
 /* ====== PROFILE ====== */
 .profile-wrap{display:grid;grid-template-columns:200px 1fr;gap:52px;align-items:start}
@@ -492,6 +528,54 @@ footer p{font-size:13px;color:var(--muted)}
   </div>
 </section>
 
+</div>
+
+<!-- POKE BRIDGE -->
+<div class="poke-bridge">
+  <svg viewBox="0 0 220 244" xmlns="http://www.w3.org/2000/svg" style="width:140px;height:auto;">
+    <ellipse cx="110" cy="237" rx="62" ry="8" fill="#1A3050" opacity="0.06"/>
+    <!-- legs -->
+    <path d="M96,188 L92,218" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M96,188 L92,218" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M126,188 L130,218" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M126,188 L130,218" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- feet -->
+    <ellipse cx="88" cy="222" rx="15" ry="8.5" fill="#4C6699" stroke="#233A63" stroke-width="3.5"/>
+    <ellipse cx="134" cy="222" rx="15" ry="8.5" fill="#4C6699" stroke="#233A63" stroke-width="3.5"/>
+    <!-- body -->
+    <ellipse cx="111" cy="148" rx="58" ry="55" fill="#4C6699" stroke="#233A63" stroke-width="5"/>
+    <ellipse cx="111" cy="148" rx="45" ry="40" fill="#fff" opacity="0.15"/>
+    <!-- belly -->
+    <ellipse cx="111" cy="160" rx="28" ry="22" fill="#6A86B8"/>
+    <!-- arms — WELCOME (both raised) -->
+    <path d="M164,148 Q192,126 198,108" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M164,148 Q192,126 198,108" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M58,148 Q30,126 24,108" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M58,148 Q30,126 24,108" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- hands -->
+    <circle cx="200" cy="104" r="11" fill="#4C6699" stroke="#233A63" stroke-width="4"/>
+    <circle cx="22" cy="104" r="11" fill="#4C6699" stroke="#233A63" stroke-width="4"/>
+    <!-- head -->
+    <circle cx="111" cy="82" r="54" fill="#4C6699" stroke="#233A63" stroke-width="5"/>
+    <circle cx="111" cy="82" r="44" fill="#6A86B8" opacity="0.3"/>
+    <!-- face highlight -->
+    <ellipse cx="111" cy="72" rx="28" ry="18" fill="#fff" opacity="0.1"/>
+    <!-- eyes -->
+    <ellipse cx="93" cy="78" rx="9" ry="10" fill="#1A2A4A"/>
+    <ellipse cx="129" cy="78" rx="9" ry="10" fill="#1A2A4A"/>
+    <circle cx="96" cy="75" r="3.5" fill="#fff"/>
+    <circle cx="132" cy="75" r="3.5" fill="#fff"/>
+    <!-- cheeks -->
+    <ellipse cx="78" cy="90" rx="8" ry="5" fill="#F7941D" opacity="0.5"/>
+    <ellipse cx="144" cy="90" rx="8" ry="5" fill="#F7941D" opacity="0.5"/>
+    <!-- smile -->
+    <path d="M97,96 Q111,108 125,96" stroke="#1A2A4A" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- ears -->
+    <ellipse cx="57" cy="70" rx="11" ry="16" fill="#4C6699" stroke="#233A63" stroke-width="4"/>
+    <ellipse cx="165" cy="70" rx="11" ry="16" fill="#4C6699" stroke="#233A63" stroke-width="4"/>
+    <ellipse cx="57" cy="70" rx="6" ry="10" fill="#6A86B8"/>
+    <ellipse cx="165" cy="70" rx="6" ry="10" fill="#6A86B8"/>
+  </svg>
 </div>
 
 <!-- CONCEPT -->
@@ -680,15 +764,27 @@ footer p{font-size:13px;color:var(--muted)}
   </div>
 </section>
 
-<!-- PHOTOS -->
-<div class="photo-sec">
-  <div class="wrap">
-    <div class="photo-lbl">活動シーン</div>
-    <div class="photo-grid">
-      <div class="ph"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/902355dd-807f-4ec1-8fa1-e5dda1211dab.jpg" alt="活動シーン" loading="lazy"></div>
-      <div class="ph"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/ed8b75d2-279e-4b6f-952e-1cad0fafdb27.jpg" alt="活動シーン" loading="lazy"></div>
-      <div class="ph"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/a36e6441-d12c-429f-8909-9ddd0be7b5e2.jpg" alt="活動シーン" loading="lazy"></div>
-      <div class="ph"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/1eca04ad-cc73-448a-8c0a-fcd2f4d115bc.jpg" alt="活動シーン" loading="lazy"></div>
+<!-- PHOTOS CAROUSEL -->
+<div class="carousel-sec">
+  <div class="carousel-lbl">掲載企業 活動シーン</div>
+  <div class="carousel-track-outer">
+    <div class="carousel-track">
+      <!-- set A -->
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/902355dd-807f-4ec1-8fa1-e5dda1211dab.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/ed8b75d2-279e-4b6f-952e-1cad0fafdb27.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/a36e6441-d12c-429f-8909-9ddd0be7b5e2.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/1eca04ad-cc73-448a-8c0a-fcd2f4d115bc.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/902355dd-807f-4ec1-8fa1-e5dda1211dab.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/ed8b75d2-279e-4b6f-952e-1cad0fafdb27.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/a36e6441-d12c-429f-8909-9ddd0be7b5e2.jpg" alt="活動シーン" loading="lazy"></div>
+      <!-- set B (duplicate for seamless loop) -->
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/902355dd-807f-4ec1-8fa1-e5dda1211dab.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/ed8b75d2-279e-4b6f-952e-1cad0fafdb27.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/a36e6441-d12c-429f-8909-9ddd0be7b5e2.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/1eca04ad-cc73-448a-8c0a-fcd2f4d115bc.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/902355dd-807f-4ec1-8fa1-e5dda1211dab.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/ed8b75d2-279e-4b6f-952e-1cad0fafdb27.jpg" alt="活動シーン" loading="lazy"></div>
+      <div class="c-item"><img src="https://aoharu-intern-media.s3.ap-northeast-1.amazonaws.com/job_files/a36e6441-d12c-429f-8909-9ddd0be7b5e2.jpg" alt="活動シーン" loading="lazy"></div>
     </div>
   </div>
 </div>
