@@ -230,10 +230,14 @@ footer p{font-size:13px;color:var(--muted)}
 .diff-tag{font-size:12px;font-weight:900;letter-spacing:.08em;margin-bottom:16px;display:inline-block;padding:5px 13px;border-radius:6px}
 .diff-tag.g{background:#EDEFF2;color:var(--muted)}
 .diff-tag.b{background:var(--blue);color:#fff}
-.diff-flow{font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.95}
-.diff-card.alt .diff-flow{color:var(--muted);font-weight:500}
-.diff-flow .ar{color:var(--blue);font-weight:900;margin:0 5px}
-.diff-card.alt .diff-flow .ar{color:#B8C0CC}
+.diff-flow{display:flex;flex-direction:column;gap:11px}
+.dstep{font-size:16px;font-weight:700;color:var(--navy);line-height:1.45}
+.dstep.s2{margin-left:26px}
+.dstep.s3{margin-left:52px}
+.dstep .ar{color:var(--blue);font-weight:900;margin-right:7px}
+.dstep.hi{color:var(--blue);font-weight:900}
+.diff-card.alt .dstep{color:var(--muted);font-weight:500}
+.diff-card.alt .dstep .ar{color:#B8C0CC}
 .diff-stat{background:var(--navy);border-radius:18px;padding:38px 40px;display:flex;align-items:center;gap:36px;color:#fff;position:relative;overflow:hidden}
 .diff-stat::before{content:'';position:absolute;width:340px;height:340px;background:radial-gradient(circle,rgba(41,171,226,.3),transparent 65%);top:-130px;right:-60px;border-radius:50%}
 .diff-stat-num{font-size:clamp(3.6rem,9vw,5.8rem);font-weight:900;letter-spacing:-0.04em;line-height:1;color:var(--blue);position:relative;white-space:nowrap}
@@ -418,18 +422,18 @@ footer p{font-size:13px;color:var(--muted)}
     <div class="diff-cols">
       <div class="diff-card alt">
         <span class="diff-tag g">一般的な掲載型サービス</span>
-        <div class="diff-flow">求人サイトに掲載<span class="ar">→</span>学生が自由にエントリー<span class="ar">→</span>マッチ度は運次第</div>
+        <div class="diff-flow"><div class="dstep">求人サイトに掲載</div><div class="dstep s2"><span class="ar">→</span>学生が自由にエントリー</div><div class="dstep s3"><span class="ar">→</span>マッチ度は運次第</div></div>
       </div>
       <div class="diff-card win">
         <span class="diff-tag b">AOHARUインターン</span>
-        <div class="diff-flow">求人を丁寧にヒアリング<span class="ar">→</span>学生“全員”と面談<span class="ar">→</span>貴社に合う人材だけをご紹介</div>
+        <div class="diff-flow"><div class="dstep">求人を丁寧にヒアリング</div><div class="dstep s2"><span class="ar">→</span>学生“全員”と面談</div><div class="dstep s3 hi"><span class="ar">→</span>貴社に合う人材だけをご紹介</div></div>
       </div>
     </div>
     <div class="diff-stat">
       <div class="diff-stat-num">84<small>%</small></div>
       <div class="diff-stat-txt">
         <h3>内定からの決定率 84%</h3>
-        <p>「合う人材だけを厳選してご紹介する」から、内定後の決定率はこの水準。ミスマッチを抑え、入社後の定着まで見据えた紹介を実現しています。</p>
+        <p>「合う人材だけを厳選してご紹介する」から、内定後の決定率はこの水準。<br>ミスマッチを抑え、入社後の定着まで見据えた紹介を実現しています。</p>
       </div>
     </div>
   </div>
