@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AOHARUインターン｜長期インターン紹介 | 成長支援型・大学1・2年生特化</title>
-<meta name="description" content="成長意欲の高い大学1・2年生に特化した成長支援型の長期インターン紹介。キャリアカウンセリングを経て、自走力・カルチャーフィットの高い学生を紹介。初期費用0・完全成果報酬。">
+<title>AOHARUインターン｜長期インターン紹介 | 大学1・2年生特化・全員面談で厳選紹介</title>
+<meta name="description" content="大学1・2年生に特化した長期インターン紹介。求人サイトに載せて待つのではなく、全員と面談し貴社に合う人材だけを紹介。内定からの決定率84%。初期費用0・完全成果報酬。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -221,6 +221,77 @@ footer p{font-size:13px;color:var(--muted)}
   .cta-form,.price-card{padding:28px 20px}
   .fl2{grid-template-columns:1fr}
 }
+
+/* DIFF */
+.diff-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+.diff-card{border-radius:16px;padding:32px 30px;border:1px solid var(--line);background:var(--white)}
+.diff-card.alt{background:#F4F6F9}
+.diff-card.win{border:2px solid var(--blue);box-shadow:0 12px 40px rgba(41,171,226,.16)}
+.diff-tag{font-size:12px;font-weight:900;letter-spacing:.08em;margin-bottom:16px;display:inline-block;padding:5px 13px;border-radius:6px}
+.diff-tag.g{background:#EDEFF2;color:var(--muted)}
+.diff-tag.b{background:var(--blue);color:#fff}
+.diff-flow{font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.95}
+.diff-card.alt .diff-flow{color:var(--muted);font-weight:500}
+.diff-flow .ar{color:var(--blue);font-weight:900;margin:0 5px}
+.diff-card.alt .diff-flow .ar{color:#B8C0CC}
+.diff-stat{background:var(--navy);border-radius:18px;padding:38px 40px;display:flex;align-items:center;gap:36px;color:#fff;position:relative;overflow:hidden}
+.diff-stat::before{content:'';position:absolute;width:340px;height:340px;background:radial-gradient(circle,rgba(41,171,226,.3),transparent 65%);top:-130px;right:-60px;border-radius:50%}
+.diff-stat-num{font-size:clamp(3.6rem,9vw,5.8rem);font-weight:900;letter-spacing:-0.04em;line-height:1;color:var(--blue);position:relative;white-space:nowrap}
+.diff-stat-num small{font-size:.26em;color:#fff;margin-left:6px;font-weight:700}
+.diff-stat-txt{position:relative}
+.diff-stat-txt h3{font-size:20px;font-weight:900;margin-bottom:8px;line-height:1.4}
+.diff-stat-txt p{font-size:14.5px;color:rgba(255,255,255,.82);line-height:1.85;font-weight:500}
+
+/* COMPARISON */
+.cmp{margin-top:8px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 4px 20px rgba(26,48,80,.05)}
+.cmp-grid{display:grid;grid-template-columns:1fr 1.35fr 1.35fr}
+.cmp-h{padding:20px 16px;text-align:center;font-weight:900;font-size:16px}
+.cmp-h.lbl{background:#EEF5FB;color:var(--navy)}
+.cmp-h.b{background:var(--blue);color:#fff;font-size:17px}
+.cmp-h.g{background:#EEF0F3;color:var(--muted)}
+.cmp-c{padding:20px 16px;text-align:center;border-top:1px solid var(--line);background:var(--white);font-size:13px;line-height:1.6;color:var(--muted)}
+.cmp-c.lbl{font-weight:900;color:var(--navy);background:#FAFBFC;display:flex;align-items:center;justify-content:center;font-size:14.5px}
+.cmp-c.win{background:#F2FAFE}
+.cmp-mark{font-size:25px;font-weight:900;display:block;margin-bottom:6px;line-height:1}
+.cmp-mark.good{color:var(--blue)}
+.cmp-mark.mid{color:#E0A33C}
+.cmp-mark.bad{color:#C0612F}
+
+/* MATCHING EVENT */
+.me-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px}
+.me-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 20px;border-top:4px solid var(--blue);box-shadow:0 3px 14px rgba(26,48,80,.05)}
+.me-card h4{font-size:13px;font-weight:900;color:var(--blue);letter-spacing:.06em;margin-bottom:9px}
+.me-card p{font-size:13.5px;color:var(--muted);line-height:1.7;font-weight:500}
+.me-merit{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.me-m{background:var(--bg2);border-radius:10px;padding:16px;text-align:center}
+.me-m b{display:block;font-size:14px;color:var(--navy);font-weight:900;margin-bottom:5px}
+.me-m span{font-size:12px;color:var(--muted);line-height:1.55}
+.me-note{font-size:12.5px;color:var(--muted);margin-top:16px;font-weight:600}
+
+/* STUDY */
+.study-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.study-lead{font-size:16px;color:var(--muted);line-height:1.95;font-weight:500}
+.study-lead b{color:var(--navy);font-weight:900}
+.study-list{display:flex;flex-direction:column;gap:12px}
+.study-item{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 22px;box-shadow:0 2px 12px rgba(26,48,80,.05)}
+.study-check{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-top:1px}
+.study-item p{font-size:14.5px;color:var(--navy);line-height:1.6;font-weight:600}
+
+/* SLIM NOTE */
+.slim{max-width:780px;margin:0 auto;display:flex;gap:22px;align-items:center;background:var(--bg2);border:1px solid #D4E6F2;border-radius:12px;padding:24px 30px}
+.slim h4{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:6px}
+.slim p{font-size:14px;color:var(--muted);line-height:1.8;font-weight:500}
+.slim a{color:var(--blue);font-weight:700;border-bottom:1.5px solid var(--blue)}
+
+@media(max-width:860px){
+  .diff-cols,.me-grid,.me-merit,.study-wrap{grid-template-columns:1fr}
+  .diff-stat{flex-direction:column;text-align:center;gap:18px;padding:30px 22px}
+  .cmp-grid{grid-template-columns:.9fr 1.2fr 1.2fr}
+  .cmp-h{font-size:13px}.cmp-h.b{font-size:13.5px}
+  .cmp-c{font-size:11.5px;padding:16px 8px}.cmp-c.lbl{font-size:12.5px}
+  .cmp-mark{font-size:20px}
+  .slim{flex-direction:column;text-align:center;padding:22px}
+}
 </style>
 </head>
 <body>
@@ -234,16 +305,16 @@ footer p{font-size:13px;color:var(--muted)}
   </div>
 </header>
 
-<!-- ====== HERO ====== -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-glow"></div>
   <div class="hero-body">
     <div class="hero-text">
       <span class="hero-badge">大学1・2年生特化 ／ 長期インターン紹介</span>
-      <h1>見極めは、<br>一緒に<br><em>働いてから。</em></h1>
+      <h1>優秀な学生に、<br>いちばん<br><em>早く出会う。</em></h1>
       <div class="hero-quote">
-        <span class="hero-quote-main">情報では、人は測れない。</span>
-        <span class="hero-quote-sub">成長意欲の高い大学1・2年生を、長期インターンで。<br>自走する学生だけを、キャリアカウンセリングを経て貴社へ。</span>
+        <span class="hero-quote-main">掲載して待つ、ではなく。</span>
+        <span class="hero-quote-sub">求人を丁寧にヒアリングし、学生全員と面談。<br>貴社に“本当に合う”大学1・2年生だけを、ご紹介します。</span>
       </div>
       <div class="line-stats">
         <span class="line-icon">LINE</span>
@@ -253,12 +324,11 @@ footer p{font-size:13px;color:var(--muted)}
         </div>
         <div class="line-div"></div>
         <div class="line-stat">
-          <span class="line-num">240<small>名/累計面談</small></span>
-          <span class="line-lbl">カウンセリング実施学生数</span>
+          <span class="line-num">84<small>% 決定率</small></span>
+          <span class="line-lbl">内定からの決定率（厳選紹介の結果）</span>
         </div>
       </div>
     </div>
-
     <div class="hero-form-card">
       <div class="hfc-head">
         <div class="hfc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4H18A2 2 0 0 1 20 6V13A2 2 0 0 1 18 15H10L6.5 18.5V15H6A2 2 0 0 1 4 13V6A2 2 0 0 1 6 4Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8.5" cy="9.5" r="1.05" fill="#fff"/><circle cx="12" cy="9.5" r="1.05" fill="#fff"/><circle cx="15.5" cy="9.5" r="1.05" fill="#fff"/></svg></div>
@@ -318,21 +388,9 @@ footer p{font-size:13px;color:var(--muted)}
       <p class="c-body">AOHARUインターンは、成長意欲の高い大学1・2年生に特化した長期インターン紹介サービスです。「早期から育て、長く関わる」ことにこだわり、本気で成長したい大学1・2年生とスタートアップ・ベンチャー企業をつなぐ“成長支援型・長期インターン紹介サービス”です。</p>
     </div>
     <div class="concept-cards-row">
-      <div class="cc2">
-        <div class="cc2-en">FOR STUDENT</div>
-        <h3>成長の場として</h3>
-        <p>挑戦 → 成果 → 言語化 → 市場価値。実務を通じて、学生が自分の強みを再現可能なスキルへと育てます。</p>
-      </div>
-      <div class="cc2">
-        <div class="cc2-en">FOR CORP.</div>
-        <h3>見極めの場として</h3>
-        <p>採用の前に、一緒に働いて見極める。情報や面接だけでは分からない“自走力”を、実務で確かめられます。</p>
-      </div>
-      <div class="cc2">
-        <div class="cc2-en">ALL IN</div>
-        <h3>定着まで伴走</h3>
-        <p>母集団形成から紹介、入社後の定着・戦力化まで。エージェント型で一気通貫にフルサポートします。</p>
-      </div>
+      <div class="cc2"><div class="cc2-en">EARLY</div><h3>大学1・2年生に特化</h3><p>就活が本格化する前の早い段階で、行動力・成長意欲の高い優秀層と接点を持てます。</p></div>
+      <div class="cc2"><div class="cc2-en">CURATED</div><h3>全員面談で厳選紹介</h3><p>求人サイトに載せて待つのではなく、学生全員と面談し、貴社に合う人材だけをご紹介します。</p></div>
+      <div class="cc2"><div class="cc2-en">ALL IN</div><h3>定着まで伴走</h3><p>母集団形成から紹介、教育設計・カウンセリング、入社後の定着まで一気通貫でサポートします。</p></div>
     </div>
   </div>
 </section>
@@ -342,63 +400,70 @@ footer p{font-size:13px;color:var(--muted)}
   <div class="wrap">
     <div class="stag">ISSUE ／ よくある課題</div>
     <h2 class="sh">こんな採用課題、<br>ありませんか？</h2>
-    <p class="sl">本選考が解禁される頃には、優秀層は大手・競合に囲い込まれている。短期接点だけでは、もう差がつきません。</p>
+    <p class="sl">「優秀な学生に早く出会い、長く育てたい」。でも、従来の長期インターン紹介では、こんな壁にぶつかります。</p>
     <div class="prob-grid">
-      <div class="prob-card">
-        <div class="prob-num">課題 01</div>
-        <h3>優秀な学生と<br>出会う機会がない</h3>
-        <p>本選考解禁時には大手・競合の囲い込みが終わっている。短期インターンだけでは差別化を見出せない。</p>
+      <div class="prob-card"><div class="prob-num">課題 01</div><h3>戦力になった頃には、<br>もう卒業してしまう</h3><p>3・4年生からの短期接点では、育って戦力になった頃には就活・卒業。じっくり育てる時間が取れません。</p></div>
+      <div class="prob-card"><div class="prob-num">課題 02</div><h3>掲載型では、自社に<br>合うか分からない</h3><p>求人サイトに載せて学生が勝手にエントリーする方式では、母集団は集まってもマッチ度は運任せになりがちです。</p></div>
+      <div class="prob-card"><div class="prob-num">課題 03</div><h3>面接だけでは“自走力”を<br>見抜けない</h3><p>短時間の面接では主体性やカルチャーフィットを見極めきれず、ミスマッチや早期離職につながります。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFF（差別化の核） -->
+<section class="sec bgw">
+  <div class="wrap">
+    <div class="stag">WHY WORCRY ／ 他社との違い</div>
+    <h2 class="sh">求人サイトに<br>「載せて終わり」じゃない。</h2>
+    <p class="sl">多くの長期インターン紹介は、求人サイトに掲載し、学生が自らエントリーして決まる“掲載型”。AOHARUインターンは、ここが決定的に違います。</p>
+    <div class="diff-cols">
+      <div class="diff-card alt">
+        <span class="diff-tag g">一般的な掲載型サービス</span>
+        <div class="diff-flow">求人サイトに掲載<span class="ar">→</span>学生が自由にエントリー<span class="ar">→</span>マッチ度は運次第</div>
       </div>
-      <div class="prob-card">
-        <div class="prob-num">課題 02</div>
-        <h3>内定辞退・流出・<br>早期離職を防ぎたい</h3>
-        <p>条件や知名度争いでは他社に負けてしまう。アトラクトが不足し、見極めも難しいのが実情です。</p>
+      <div class="diff-card win">
+        <span class="diff-tag b">AOHARUインターン</span>
+        <div class="diff-flow">求人を丁寧にヒアリング<span class="ar">→</span>学生“全員”と面談<span class="ar">→</span>貴社に合う人材だけをご紹介</div>
       </div>
-      <div class="prob-card">
-        <div class="prob-num">課題 03</div>
-        <h3>ミスマッチを減らし<br>早期戦力化したい</h3>
-        <p>採用・教育コストを無駄にしたくない。しっかり社風にマッチする学生を採用していきたい。</p>
+    </div>
+    <div class="diff-stat">
+      <div class="diff-stat-num">84<small>%</small></div>
+      <div class="diff-stat-txt">
+        <h3>内定からの決定率 84%</h3>
+        <p>「合う人材だけを厳選してご紹介する」から、内定後の決定率はこの水準。ミスマッチを抑え、入社後の定着まで見据えた紹介を実現しています。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE -->
+<!-- COMPARISON（図解） -->
+<section class="sec bg2">
+  <div class="wrap">
+    <div class="stag">COMPARISON ／ 比較</div>
+    <h2 class="sh">AOHARUインターンは、<br>大学1〜2年生に特化。</h2>
+    <p class="sl">長期的に育成できるうえ、カルチャーフィットまで見据えた伴走体制が整っています。</p>
+    <div class="cmp">
+      <div class="cmp-grid">
+        <div class="cmp-h lbl">比較項目</div>
+        <div class="cmp-h b">AOHARUインターン</div>
+        <div class="cmp-h g">他社</div>
+        <div class="cmp-c lbl">大学1〜2年生</div><div class="cmp-c win"><span class="cmp-mark good">◎</span>早期から育成が可能</div><div class="cmp-c"><span class="cmp-mark bad">✕</span>3〜4年生が大半で短期間のみ</div><div class="cmp-c lbl">卒業後の即戦力</div><div class="cmp-c win"><span class="cmp-mark good">◎</span>2〜3年の長期インターンで育成可能</div><div class="cmp-c"><span class="cmp-mark mid">△</span>成果は見えても即戦力化までは難しい</div><div class="cmp-c lbl">カルチャーフィット</div><div class="cmp-c win"><span class="cmp-mark good">◎</span>理念への共感まで醸成できる</div><div class="cmp-c"><span class="cmp-mark bad">✕</span>就活対策が中心になりがち</div><div class="cmp-c lbl">導入のしやすさ</div><div class="cmp-c win"><span class="cmp-mark good">◎</span>求人票作成・紹介まで継続伴走</div><div class="cmp-c"><span class="cmp-mark mid">△</span>求人原稿作成・学生探しは企業主体のことも</div><div class="cmp-c lbl">導入後のフォロー</div><div class="cmp-c win"><span class="cmp-mark good">◎</span>面談・教育設計・カウンセリングまで</div><div class="cmp-c"><span class="cmp-mark bad">✕</span>教育コストやフォローは企業任せ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE（4つの価値） -->
 <section class="sec bgw">
   <div class="wrap">
     <div class="stag">SERVICE ／ サービス内容</div>
     <h2 class="sh">企業にとっての4つの価値</h2>
-    <p class="sl">成長意欲の高い大学1〜2年生に限定して紹介。必ずキャリアカウンセリングを実施し、自走力・主体性が高くカルチャーフィットする学生を推薦します。</p>
+    <p class="sl">大学1・2年生に限定して紹介。必ずキャリアカウンセリングを実施し、自走力・主体性が高くカルチャーフィットする学生を推薦します。</p>
     <div class="svc-wrap">
       <div class="svc-list">
-        <div class="svc-row">
-          <div class="svc-n">01</div>
-          <div>
-            <h3>早期接触</h3>
-            <p>大学1・2年生という早い段階から優秀層と接点を持ち、長期的な信頼関係を構築できます。</p>
-          </div>
-        </div>
-        <div class="svc-row">
-          <div class="svc-n">02</div>
-          <div>
-            <h3>エージェント型フルサポート</h3>
-            <p>母集団形成 → 面談アトラクト → 貴社紹介 → 日程調整 → クロージングまで、弊社が一気通貫で担当します。</p>
-          </div>
-        </div>
-        <div class="svc-row">
-          <div class="svc-n">03</div>
-          <div>
-            <h3>マッチングイベント</h3>
-            <p>月2回、約10名の学生が参加する総当たり形式を開催。「集める」と「見極める」を同時に実現します。</p>
-          </div>
-        </div>
-        <div class="svc-row">
-          <div class="svc-n">04</div>
-          <div>
-            <h3>採用コスト最適化</h3>
-            <p>フロー型からストック型へ。新卒採用への導線設計も可能で、トータルの採用効率を高めます。</p>
-          </div>
-        </div>
+        <div class="svc-row"><div class="svc-n">01</div><div><h3>早期接触</h3><p>大学1・2年生という早い段階から優秀層と接点を持ち、長期的な信頼関係を構築できます。</p></div></div>
+        <div class="svc-row"><div class="svc-n">02</div><div><h3>エージェント型フルサポート</h3><p>母集団形成 → 面談アトラクト → 貴社紹介 → 日程調整 → クロージングまで、弊社が一気通貫で担当します。</p></div></div>
+        <div class="svc-row"><div class="svc-n">03</div><div><h3>マッチングイベント</h3><p>月2回、企業5社 × 候補者10名の総当たり形式を開催。「集める」と「見極める」を同時に実現します。</p></div></div>
+        <div class="svc-row"><div class="svc-n">04</div><div><h3>採用コスト最適化</h3><p>フロー型からストック型の採用へ。長期的な採用効率の向上で、トータルコストを削減します。</p></div></div>
       </div>
       <div class="svc-char"><svg viewBox="0 0 220 244" xmlns="http://www.w3.org/2000/svg" style="width:200px;height:auto;">
   <ellipse cx="110" cy="237" rx="62" ry="8" fill="#1A3050" opacity="0.06"/>
@@ -429,57 +494,76 @@ footer p{font-size:13px;color:var(--muted)}
   </div>
 </section>
 
-<!-- CYCLE（WorCryの独自性：成長サイクル） -->
+<!-- CYCLE -->
 <section class="sec bg2">
   <div class="wrap">
     <div class="stag">ORIGINALITY ／ WorCryの独自性</div>
     <h2 class="sh">経験を、市場価値に変える<br>「成長サイクル」。</h2>
     <p class="sl">単なる体験で終わらせず、再現可能なスキルへ変換する。この循環があるから、貴社にとって“育った戦力”を紹介できます。</p>
     <div class="cycle-wrap">
-      <div class="cy-item">
-        <div class="cy-dot"></div>
-        <div class="cy-step">STEP 01 ／ 挑戦</div>
-        <div class="cy-ttl">現場実務に<br>コミット</div>
-        <div class="cy-body">大学低学年から、責任ある実務に早期から挑戦します。</div>
-      </div>
-      <div class="cy-item">
-        <div class="cy-dot"></div>
-        <div class="cy-step">STEP 02 ／ 成果</div>
-        <div class="cy-ttl">自己効力感の<br>向上</div>
-        <div class="cy-body">具体的な実績を積み、「できる」という手応えを得ます。</div>
-      </div>
-      <div class="cy-item">
-        <div class="cy-dot"></div>
-        <div class="cy-step">STEP 03 ／ 言語化</div>
-        <div class="cy-ttl">強みと学びを<br>整理</div>
-        <div class="cy-body">カウンセリングで、自身の強みと学びを言葉にします。</div>
-      </div>
-      <div class="cy-item">
-        <div class="cy-dot"></div>
-        <div class="cy-step">STEP 04 ／ 市場価値</div>
-        <div class="cy-ttl">再現可能な<br>スキルへ</div>
-        <div class="cy-body">どこでも通用する力として定着。貴社の戦力になります。</div>
-      </div>
+      <div class="cy-item"><div class="cy-dot"></div><div class="cy-step">STEP 01 ／ 挑戦</div><div class="cy-ttl">現場実務に<br>コミット</div><div class="cy-body">大学低学年から、責任ある実務に早期から挑戦します。</div></div>
+      <div class="cy-item"><div class="cy-dot"></div><div class="cy-step">STEP 02 ／ 成果</div><div class="cy-ttl">自己効力感の<br>向上</div><div class="cy-body">具体的な実績を積み、「できる」という手応えを得ます。</div></div>
+      <div class="cy-item"><div class="cy-dot"></div><div class="cy-step">STEP 03 ／ 言語化</div><div class="cy-ttl">強みと学びを<br>整理</div><div class="cy-body">カウンセリングで、自身の強みと学びを言葉にします。</div></div>
+      <div class="cy-item"><div class="cy-dot"></div><div class="cy-step">STEP 04 ／ 市場価値</div><div class="cy-ttl">再現可能な<br>スキルへ</div><div class="cy-body">どこでも通用する力として定着。貴社の戦力になります。</div></div>
     </div>
   </div>
 </section>
 
-<!-- FLOW（エージェント型・一気通貫） -->
+<!-- MATCHING EVENT -->
 <section class="sec bgw">
+  <div class="wrap">
+    <div class="stag">MATCHING EVENT ／ マッチングイベント</div>
+    <h2 class="sh">必ず母集団をキープする、<br>マッチングイベント。</h2>
+    <p class="sl">月2回開催のオンラインイベント。企業5社 × 候補者10名で、「集める」と「見極める」を一度に。求人票では伝わらない自社の魅力も、対話で直接届けられます。</p>
+    <div class="me-grid">
+      <div class="me-card"><h4>形式</h4><p>ZOOMのブレイクアウト方式。12分×5セッションで、全企業と候補者が順番に対話します。</p></div>
+      <div class="me-card"><h4>規模</h4><p>企業5社 × 候補者10名。毎回しっかりと母集団を確保した状態でスタートします。</p></div>
+      <div class="me-card"><h4>厳選接点</h4><p>マッチングは1名につき最大2社まで。双方の熱量を守る、密度の高い接点設計です。</p></div>
+      <div class="me-card"><h4>双方マッチング</h4><p>興味度を5段階で相互評価。希望が合った組み合わせから、面接日程の調整へ進みます。</p></div>
+    </div>
+    <div class="me-merit">
+      <div class="me-m"><b>母集団形成</b><span>複数候補者へ一度にアプローチ</span></div>
+      <div class="me-m"><b>マッチング最大化</b><span>組み合わせを最適に設計</span></div>
+      <div class="me-m"><b>理解深化</b><span>求人票で伝わらない魅力を直接</span></div>
+      <div class="me-m"><b>志望度向上</b><span>“興味”を“ここで働きたい”へ</span></div>
+    </div>
+    <div class="me-note">※ 参加費用は無料。費用は採用成果報酬のみ（契約内容に準じます）。</div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="sec bg2">
   <div class="wrap">
     <div class="stag">FLOW ／ 紹介の流れ</div>
     <h2 class="sh">母集団形成から定着まで、<br>一気通貫で伴走します。</h2>
     <div class="flow-wrap">
-      <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 01</div><div class="f-ttl">母集団形成</div><div class="f-body">LINE・イベント等で成長意欲の高い1・2年生を集めます。</div></div>
-      <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 02</div><div class="f-ttl">面談・アトラクト</div><div class="f-body">キャリアカウンセリングで見極め、貴社の魅力を訴求します。</div></div>
-      <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 03</div><div class="f-ttl">貴社へ紹介</div><div class="f-body">自走力・カルチャーフィットの観点で厳選し推薦します。</div></div>
+      <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 01</div><div class="f-ttl">母集団形成</div><div class="f-body">LINE・イベント等で、成長意欲の高い1・2年生を集めます。</div></div>
+      <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 02</div><div class="f-ttl">全員と面談</div><div class="f-body">学生全員にキャリアカウンセリングを実施し、見極めます。</div></div>
+      <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 03</div><div class="f-ttl">合う人材のみ紹介</div><div class="f-body">求人をヒアリングし、貴社に本当に合う学生だけを推薦します。</div></div>
       <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 04</div><div class="f-ttl">日程調整・選考</div><div class="f-body">面談セットからクロージングまで、調整を代行します。</div></div>
-      <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 05</div><div class="f-ttl">入社・定着支援</div><div class="f-body">入社後も学生をサポートし、定着・戦力化まで伴走します。</div></div>
+      <div class="f-item"><div class="f-dot"></div><div class="f-step">PHASE 05</div><div class="f-ttl">入社・両立支援</div><div class="f-body">入社後も学業との両立を支え、定着・戦力化まで伴走します。</div></div>
     </div>
   </div>
 </section>
 
-<!-- STATS（トラクション） -->
+<!-- STUDY（学業との両立） -->
+<section class="sec bgw">
+  <div class="wrap">
+    <div class="stag">SUPPORT ／ 学業との両立</div>
+    <h2 class="sh">本当に1〜2年生で<br>大丈夫？</h2>
+    <div class="study-wrap">
+      <p class="study-lead">“大学1〜2年生に特化”と聞くと、<b>「授業や試験で忙しくて、途中で来られなくなるのでは？」</b>——そんな不安を感じる企業さまも少なくありません。<br><br>AOHARUインターンでは、学生が無理なく続けられるよう<b>学業との両立を支えています。</b></p>
+      <div class="study-list">
+        <div class="study-item"><div class="study-check">✓</div><p>企業と学生、双方の希望を踏まえてマッチング</p></div>
+        <div class="study-item"><div class="study-check">✓</div><p>週3日前後の稼働を前提に、定期的なカウンセリングを実施</p></div>
+        <div class="study-item"><div class="study-check">✓</div><p>学生の稼働日数が少ない場合は、料金を調整</p></div>
+        <div class="study-item"><div class="study-check">✓</div><p>ビジネスマナー研修や自己啓発系セミナーを定期開催</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACTION -->
 <section class="sec bg2">
   <div class="wrap">
     <div class="stag">TRACTION ／ 実績</div>
@@ -492,7 +576,6 @@ footer p{font-size:13px;color:var(--muted)}
       <div class="s-item"><div class="s-num">2,292<small>名</small></div><div class="s-lbl">LINE登録数</div><div class="s-fore">今期末見込 14,000名</div></div>
       <div class="s-item"><div class="s-num">75<small>件</small></div><div class="s-lbl">掲載求人数</div><div class="s-fore">今期末見込 200件</div></div>
     </div>
-
     <div class="data-grid">
       <div>
         <div class="data-ttl"><span>DATA 1</span>業種別 内訳</div>
@@ -547,7 +630,7 @@ footer p{font-size:13px;color:var(--muted)}
   </div>
 </section>
 
-<!-- PRICE（訴求のみ） -->
+<!-- PRICE -->
 <section class="sec bg2">
   <div class="wrap">
     <div class="price-wrap">
@@ -566,11 +649,11 @@ footer p{font-size:13px;color:var(--muted)}
   </div>
 </section>
 
-<!-- CROSSLINK -->
+<!-- 関連（軽い言及） -->
 <section class="sec bgw">
   <div class="wrap">
-    <div class="lt-wrap">
-      <div style="flex-shrink:0"><svg viewBox="0 0 220 244" xmlns="http://www.w3.org/2000/svg" style="width:64px;height:auto;">
+    <div class="slim">
+      <div style="flex-shrink:0"><svg viewBox="0 0 220 244" xmlns="http://www.w3.org/2000/svg" style="width:60px;height:auto;">
   <ellipse cx="110" cy="237" rx="62" ry="8" fill="#1A3050" opacity="0.06"/>
   <path d="M96,188 L92,214" stroke="#233A63" stroke-width="16" fill="none" stroke-linecap="round"/>
   <path d="M96,188 L92,214" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
@@ -596,10 +679,8 @@ footer p{font-size:13px;color:var(--muted)}
   <path d="M104,161 Q112,168 120,161" fill="none" stroke="#233A63" stroke-width="3" stroke-linecap="round"/>
 </svg></div>
       <div>
-        <div class="lt-badge">短期インターン送客も対応</div>
-        <h3>「早期接点づくり」なら短期送客も</h3>
-        <p>大学2年生との早期接点から3年夏・本選考まで一気通貫の、伴走型 短期インターン送客支援も運営しています。大手・準大手・メガベンチャー向けの早期採用支援はこちら。</p>
-        <a href="https://ssuzuki-ops.github.io/aoharu-intern-lp/" target="_blank" class="lt-link">短期インターン送客のサービスを見る →</a>
+        <h4>長期インターンから、新卒採用への接続もサポート</h4>
+        <p>長期インターンで一緒に働いた学生を、そのまま新卒採用へ。ご希望に応じて接続もお手伝いします。早期接点づくりに特化した <a href="https://ssuzuki-ops.github.io/aoharu-intern-lp/" target="_blank">短期インターン送客サービス</a> もご用意しています。</p>
       </div>
     </div>
   </div>
