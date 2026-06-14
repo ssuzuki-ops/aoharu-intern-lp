@@ -83,13 +83,12 @@ header{
 /* 左: テキスト */
 .hero-text{}
 .hero-service-tag{
-  display:inline-flex;align-items:center;gap:7px;
+  display:inline-flex;align-items:center;
+  background:var(--orange);color:#fff;
   font-size:11px;font-weight:700;letter-spacing:.18em;
-  color:var(--muted);text-transform:uppercase;
-  margin-bottom:20px;
-}
-.hero-service-tag::before{
-  content:'';width:20px;height:1.5px;background:var(--line);
+  text-transform:uppercase;
+  padding:6px 16px;border-radius:100px;
+  margin-bottom:22px;
 }
 .hero h1{
   font-size:clamp(3.4rem,6.2vw,5rem);
@@ -494,7 +493,7 @@ footer p{font-size:13px;color:var(--muted)}
 
     <!-- 左: テキスト -->
     <div class="hero-text">
-      <span class="hero-service-tag">大手・準大手・メガベン向け 早期採用支援</span>
+      <span class="hero-service-tag">大学1・2年生特化 ／ 新卒採用支援</span>
       <h1>会って、<br>育てて、<br><em>つなぐ。</em></h1>
       <div class="hero-quote">
         <span class="hero-quote-main">いい採用は、いい出会いから。</span>
