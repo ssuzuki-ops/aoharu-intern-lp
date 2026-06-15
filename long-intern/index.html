@@ -303,6 +303,12 @@ footer p{font-size:13px;color:var(--muted)}
   .slim{flex-direction:column;text-align:center;padding:22px}
   .slim-grid{grid-template-columns:1fr}
 }
+
+/* FORM DONE */
+.form-done{padding:30px 24px;text-align:center;color:var(--navy);line-height:1.85;animation:fadein .3s ease}
+.form-done strong{display:block;font-size:18px;color:var(--blue);margin-bottom:6px}
+.form-done span{font-size:14px;color:var(--muted)}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -348,7 +354,7 @@ footer p{font-size:13px;color:var(--muted)}
           <div class="hfc-sub">資料請求はこちら / 1営業日以内に返信</div>
         </div>
       </div>
-      <form class="hfc-body" action="https://formsubmit.co/saiyou@worcry.com" method="POST"><input type="hidden" name="_subject" value="【AOHARU長期インターン】お問い合わせ（FVフォーム）"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://ssuzuki-ops.github.io/aoharu-intern-lp/long-intern/?sent=1">
+      <form class="hfc-body" action="https://script.google.com/macros/s/AKfycbwmOJuv34hxcOqSmi8thdgfE62uim-Ed_DBAJBfdjVF4kdRfy9oKmtojxyhJtJUbIs/exec" method="POST" data-gas="1"><input type="hidden" name="_form" value="FVフォーム">
         <div class="hfc-row2">
           <div class="hfc-fl"><label>会社名</label><input class="hfc-fi" type="text" name="会社名" placeholder="株式会社○○" required></div>
           <div class="hfc-fl"><label>お名前</label><input class="hfc-fi" type="text" name="お名前" placeholder="山田 太郎" required></div>
@@ -669,7 +675,7 @@ footer p{font-size:13px;color:var(--muted)}
   <circle cx="128" cy="142" r="1.6" fill="#fff"/>
   <path d="M104,161 Q112,168 120,161" fill="none" stroke="#233A63" stroke-width="3" stroke-linecap="round"/>
 </svg></div>
-    <form class="cta-form" action="https://formsubmit.co/saiyou@worcry.com" method="POST"><input type="hidden" name="_subject" value="【AOHARU長期インターン】お問い合わせ（CTAフォーム）"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://ssuzuki-ops.github.io/aoharu-intern-lp/long-intern/?sent=1">
+    <form class="cta-form" action="https://script.google.com/macros/s/AKfycbwmOJuv34hxcOqSmi8thdgfE62uim-Ed_DBAJBfdjVF4kdRfy9oKmtojxyhJtJUbIs/exec" method="POST" data-gas="1"><input type="hidden" name="_form" value="CTAフォーム">
       <div class="fl2">
         <div class="fl"><label>会社名</label><input class="fi" type="text" name="会社名" placeholder="株式会社○○" required></div>
         <div class="fl"><label>お名前</label><input class="fi" type="text" name="お名前" placeholder="山田 太郎" required></div>
@@ -695,5 +701,26 @@ footer p{font-size:13px;color:var(--muted)}
   <p style="margin-top:4px">© 2026 WorCry Inc. All Rights Reserved.</p>
 </footer>
 
+<script>
+(function(){
+  function done(form){
+    var d=document.createElement('div');
+    d.className='form-done';
+    d.innerHTML='<strong>送信しました。</strong><span>担当者より1営業日以内にご連絡いたします。</span>';
+    form.parentNode.replaceChild(d, form);
+  }
+  document.querySelectorAll('form[data-gas]').forEach(function(form){
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var btn=form.querySelector('button[type=submit]');
+      if(btn){btn.disabled=true; btn.textContent='送信中…';}
+      var body=new URLSearchParams(new FormData(form));
+      fetch(form.action,{method:'POST',mode:'no-cors',body:body})
+        .then(function(){done(form);})
+        .catch(function(){done(form);});
+    });
+  });
+})();
+</script>
 </body>
 </html>
