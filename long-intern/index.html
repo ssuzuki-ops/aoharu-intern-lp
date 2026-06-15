@@ -58,8 +58,8 @@ header{position:fixed;inset:0 0 auto;z-index:300;height:60px;display:flex;align-
 .hero-form-card{background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 48px rgba(26,48,80,.1);overflow:hidden;align-self:center;}
 .hfc-head{background:var(--navy);padding:20px 24px;display:flex;align-items:center;gap:14px;}
 .hfc-icon{width:36px;height:36px;background:rgba(255,255,255,.16);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;}
-.hfc-ttl{font-size:15px;font-weight:700;color:#fff;line-height:1.3}
-.hfc-sub{font-size:11.5px;color:rgba(255,255,255,.6);margin-top:2px}
+.hfc-ttl{font-size:17px;font-weight:700;color:#fff;line-height:1.3}
+.hfc-sub{font-size:13px;color:rgba(255,255,255,.7);margin-top:3px}
 .hfc-body{padding:22px 24px}
 .hfc-row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .hfc-fl{margin-bottom:12px}
@@ -68,7 +68,7 @@ header{position:fixed;inset:0 0 auto;z-index:300;height:60px;display:flex;align-
 .hfc-fi:focus{border-color:var(--blue);background:#fff}
 .hfc-submit{width:100%;padding:13px;background:var(--blue);border:none;border-radius:6px;color:#fff;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:all .18s;margin-top:4px;letter-spacing:.02em;}
 .hfc-submit:hover{background:var(--blue-d);box-shadow:0 4px 16px rgba(41,171,226,.3)}
-.hfc-note{font-size:11px;color:var(--muted);text-align:center;margin-top:9px}
+.hfc-note{font-size:12px;color:var(--muted);text-align:center;margin-top:9px}
 
 /* SECTION BASE */
 .sec{padding:88px 0}
@@ -344,21 +344,21 @@ footer p{font-size:13px;color:var(--muted)}
       <div class="hfc-head">
         <div class="hfc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4H18A2 2 0 0 1 20 6V13A2 2 0 0 1 18 15H10L6.5 18.5V15H6A2 2 0 0 1 4 13V6A2 2 0 0 1 6 4Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8.5" cy="9.5" r="1.05" fill="#fff"/><circle cx="12" cy="9.5" r="1.05" fill="#fff"/><circle cx="15.5" cy="9.5" r="1.05" fill="#fff"/></svg></div>
         <div>
-          <div class="hfc-ttl">まずはお気軽にご相談を</div>
-          <div class="hfc-sub">資料請求・個別相談 / 1営業日以内に返信</div>
+          <div class="hfc-ttl">まずはお気軽にご相談を！</div>
+          <div class="hfc-sub">資料請求はこちら / 1営業日以内に返信</div>
         </div>
       </div>
-      <div class="hfc-body">
+      <form class="hfc-body" action="https://formsubmit.co/saiyou@worcry.com" method="POST"><input type="hidden" name="_subject" value="【AOHARU長期インターン】お問い合わせ（FVフォーム）"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://ssuzuki-ops.github.io/aoharu-intern-lp/long-intern/?sent=1">
         <div class="hfc-row2">
-          <div class="hfc-fl"><label>会社名</label><input class="hfc-fi" type="text" placeholder="株式会社○○"></div>
-          <div class="hfc-fl"><label>お名前</label><input class="hfc-fi" type="text" placeholder="山田 太郎"></div>
+          <div class="hfc-fl"><label>会社名</label><input class="hfc-fi" type="text" name="会社名" placeholder="株式会社○○" required></div>
+          <div class="hfc-fl"><label>お名前</label><input class="hfc-fi" type="text" name="お名前" placeholder="山田 太郎" required></div>
         </div>
-        <div class="hfc-fl"><label>メールアドレス</label><input class="hfc-fi" type="email" placeholder="taro@company.co.jp"></div>
-        <div class="hfc-fl"><label>電話番号</label><input class="hfc-fi" type="tel" placeholder="03-0000-0000"></div>
-        <div class="hfc-fl"><label>ご要望（任意）</label><textarea class="hfc-fi" rows="2" placeholder="資料請求・個別相談など"></textarea></div>
-        <button class="hfc-submit" type="button">送信する →</button>
-        <div class="hfc-note">無料 · 3分で完了 · 翌営業日以内に返信</div>
-      </div>
+        <div class="hfc-fl"><label>メールアドレス</label><input class="hfc-fi" type="email" name="email" placeholder="taro@company.co.jp" required></div>
+        <div class="hfc-fl"><label>電話番号</label><input class="hfc-fi" type="tel" name="電話番号" placeholder="03-0000-0000"></div>
+        <div class="hfc-fl"><label>ご要望（任意）</label><textarea class="hfc-fi" rows="2" name="ご要望" placeholder="資料請求・個別相談など"></textarea></div>
+        <button class="hfc-submit" type="submit">送信する →</button>
+        <div class="hfc-note">30秒で完了 · 翌営業日以内に返信</div>
+      </form>
     </div>
   </div>
 </section>
@@ -669,16 +669,16 @@ footer p{font-size:13px;color:var(--muted)}
   <circle cx="128" cy="142" r="1.6" fill="#fff"/>
   <path d="M104,161 Q112,168 120,161" fill="none" stroke="#233A63" stroke-width="3" stroke-linecap="round"/>
 </svg></div>
-    <form class="cta-form" onsubmit="return false">
+    <form class="cta-form" action="https://formsubmit.co/saiyou@worcry.com" method="POST"><input type="hidden" name="_subject" value="【AOHARU長期インターン】お問い合わせ（CTAフォーム）"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://ssuzuki-ops.github.io/aoharu-intern-lp/long-intern/?sent=1">
       <div class="fl2">
-        <div class="fl"><label>会社名</label><input class="fi" type="text" placeholder="株式会社○○"></div>
-        <div class="fl"><label>お名前</label><input class="fi" type="text" placeholder="山田 太郎"></div>
+        <div class="fl"><label>会社名</label><input class="fi" type="text" name="会社名" placeholder="株式会社○○" required></div>
+        <div class="fl"><label>お名前</label><input class="fi" type="text" name="お名前" placeholder="山田 太郎" required></div>
       </div>
       <div class="fl2">
-        <div class="fl"><label>メールアドレス</label><input class="fi" type="email" placeholder="taro@company.co.jp"></div>
-        <div class="fl"><label>電話番号</label><input class="fi" type="tel" placeholder="03-0000-0000"></div>
+        <div class="fl"><label>メールアドレス</label><input class="fi" type="email" name="email" placeholder="taro@company.co.jp" required></div>
+        <div class="fl"><label>電話番号</label><input class="fi" type="tel" name="電話番号" placeholder="03-0000-0000"></div>
       </div>
-      <div class="fl"><label>お問い合わせ内容（任意）</label><textarea class="fi" rows="3" placeholder="資料請求・個別相談など、お気軽にどうぞ"></textarea></div>
+      <div class="fl"><label>お問い合わせ内容（任意）</label><textarea class="fi" rows="3" name="ご要望" placeholder="資料請求・個別相談など、お気軽にどうぞ"></textarea></div>
       <button class="fi-submit" type="submit">送信する</button>
       <div class="fi-note">送信後、担当者より1営業日以内にご連絡いたします。</div>
     </form>
